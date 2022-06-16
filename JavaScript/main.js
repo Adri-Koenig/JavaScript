@@ -12,7 +12,7 @@ nombreUsuario();
 /*                                  Datos                                     */
 /* -------------------------------------------------------------------------- */
 
-const games = ["1. League of Legends", "2. Dota 2", "3. Valorant", "4 .Counter Strike", "5. Fortnite", "6. Apex Legends", "7. PUBG"]
+const games = ["1. League of Legends", "2. Dota 2", "3. Valorant", "4 .Counter Strike", "5. Fortnite", "6. Apex Legends", "7. PUBG"];
 
 games.pop(6);
 
@@ -199,8 +199,8 @@ console.log(buscador);
 /*                                   Filtros                                  */
 /* -------------------------------------------------------------------------- */
 
-const gamesFilter = users.filter((games) => {
-    return games.Game === "Valorant"
+const gamesFilter = users.filter((juego) => {
+    return juego.Game === "Valorant"
 })
 const winrateFilter = users.filter((element) => {
     return element.Winrate > 60, element.Played > 55
@@ -245,4 +245,5 @@ users.push({
     Winrate: Winrate1
 })
 
+console.log(users);
 alert(User1 + "\n" + Game1 + "\n" + Rank1+ "\n" + "\n" + "Winrate: " + Winrate1 + "%")
