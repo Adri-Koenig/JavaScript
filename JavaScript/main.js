@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------------- */
+/*                                 Bienvenida                                 */
+/* -------------------------------------------------------------------------- */
 function nombreUsuario() {
     let usuario = prompt("Ingrese su usuario");
     alert("Bienvenido " + usuario);
@@ -5,114 +8,118 @@ function nombreUsuario() {
 
 nombreUsuario();
 
+/* -------------------------------------------------------------------------- */
+/*                                  Datos                                     */
+/* -------------------------------------------------------------------------- */
 
-let game = {
-    game1: "1. League of Legends",
-    game2: "2. Dota 2",
-    game3: "3. Valorant",
-    game4: "4. Counter Strike",
-    game5: "5. Fortnite",
-    game6: "6. Apex Legends",
-}
+const games = ["1. League of Legends", "2. Dota 2", "3. Valorant", "4 .Counter Strike", "5. Fortnite", "6. Apex Legends", "7. PUBG"]
+
+games.pop(6);
 
 function chooseRank() {
-    let opcion = Number(prompt("Seleccione un juego " + '\n' + "Elija una opcion (Colocar el número correspondiente):" + "\n" + game.game1 + "\n" + game.game2 + "\n" + game.game3 + "\n" + game.game4 + "\n" + game.game5 + "\n" + game.game6))
+    let opcion = Number(prompt("Seleccione un juego " + '\n' + "Elija una opcion (Colocar el número correspondiente):" + "\n" + games.join("\n")))
 
     while (true) {
         if (opcion == 1) {
-            let rank = {
-                rank1: "1. Hierro",
-                rank2: "2. Bronce",
-                rank3: "3. Plata",
-                rank4: "4. Oro",
-                rank5: "5. Platino",
-                rank6: "6. Diamante",
-                rank7: "7. Master",
-                rank8: "8. GrandMaster",
-            }
-            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.rank1 + "\n" + rank.rank2 + "\n" + rank.rank3 + "\n" + rank.rank4 + "\n" + rank.rank5 + "\n" + rank.rank6 + "\n" + rank.rank7 + "\n" + rank.rank8))
+            let rank = [
+                "1. Hierro",
+                "2. Bronce",
+                "3. Plata",
+                "4. Oro",
+                "5. Platino",
+                "6. Diamante",
+                "7. Master",
+                "8. GrandMaster",
+            ]
+
+            rank.push("9. Challenger");
+
+            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.join("\n")))
             break
         }
 
         if (opcion == 2) {
-            let rank = {
-                rank1: "1. Heraldo",
-                rank2: "2. Guardián",
-                rank3: "3. Cruzado",
-                rank4: "4. Arconte",
-                rank5: "5. Leyenda",
-                rank6: "6. Ancestral",
-                rank7: "7. Divino",
-                rank8: "8. Inmortal",
-            }
-            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.rank1 + "\n" + rank.rank2 + "\n" + rank.rank3 + "\n" + rank.rank4 + "\n" + rank.rank5 + "\n" + rank.rank6 + "\n" + rank.rank7 + "\n" + rank.rank8))
+            let rank = [
+                "1. Heraldo",
+                "2. Guardián",
+                "3. Cruzado",
+                "4. Arconte",
+                "5. Leyenda",
+                "6. Ancestral",
+                "7. Divino",
+                "8. Inmortal",
+            ]
+            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.join("\n")))
             break
         }
 
         if (opcion == 3) {
-            let rank = {
-                rank1: "1. Hierro",
-                rank2: "2. Bronce",
-                rank3: "3. Plata",
-                rank4: "4. Oro",
-                rank5: "5. Platino",
-                rank6: "6. Diamante",
-                rank7: "7. Inmortal",
-                rank8: "8. Radiante",
-            }
-            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.rank1 + "\n" + rank.rank2 + "\n" + rank.rank3 + "\n" + rank.rank4 + "\n" + rank.rank5 + "\n" + rank.rank6 + "\n" + rank.rank7 + "\n" + rank.rank8))
+            let rank = [
+                "1. Hierro",
+                "2. Bronce",
+                "3. Plata",
+                "4. Oro",
+                "5. Platino",
+                "6. Diamante",
+                "7. Inmortal",
+                "8. Radiante",
+            ]
+            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.join("\n")))
             break
         }
 
         if (opcion == 4) {
-            let rank = {
-                rank1: "1. Silver",
-                rank2: "2. Gold Nova",
-                rank3: "3. Master Guardian",
-                rank4: "4. Master Guardian Elite",
-                rank5: "5. Distinguished Master Guardian",
-                rank6: "6. Legendary Eagle",
-                rank7: "7. Legendary Eagle Master",
-                rank8: "8. Supreme Master First Class",
-                rank9: "9. The Global Elite",
-            }
-            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.rank1 + "\n" + rank.rank2 + "\n" + rank.rank3 + "\n" + rank.rank4 + "\n" + rank.rank5 + "\n" + rank.rank6 + "\n" + rank.rank7 + "\n" + rank.rank8 + "\n" + rank.rank9))
+            let rank = [
+                "1. Silver",
+                "2. Gold Nova",
+                "3. Master Guardian",
+                "4. Master Guardian Elite",
+                "5. Distinguished Master Guardian",
+                "6. Legendary Eagle",
+                "7. Legendary Eagle Master",
+                "8. Supreme Master First Class",
+                "9. The Global Elite",
+            ]
+            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.join("\n")))
             break
         }
 
         if (opcion == 5) {
-            let rank = {
-                rank1: "1. Bronze",
-                rank2: "2. Silver",
-                rank3: "3. Gold",
-                rank4: "4. Platinum",
-                rank5: "5. Champion",
-            }
-            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.rank1 + "\n" + rank.rank2 + "\n" + rank.rank3 + "\n" + rank.rank4 + "\n" + rank.rank5))
+            let rank = [
+                "1. Bronze",
+                "2. Silver",
+                "3. Gold",
+                "4. Platinum",
+                "5. Champion",
+            ]
+            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.join("\n")))
             break
         }
 
         if (opcion == 6) {
-            let rank = {
-                rank1: "1. Bronze",
-                rank2: "2. Silver",
-                rank3: "3. Gold",
-                rank4: "4. Platinum",
-                rank5: "5. Diamond",
-                rank6: "6. Apex Predator",
-            }
-            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.rank1 + "\n" + rank.rank2 + "\n" + rank.rank3 + "\n" + rank.rank4 + "\n" + rank.rank5 + "\n" + rank.rank6))
+            let rank = [
+                "1. Bronze",
+                "2. Silver",
+                "3. Gold",
+                "4. Platinum",
+                "5. Diamond",
+                "6. Apex Predator",
+            ]
+            let ranking = Number(prompt("Seleccione su Rango " + "\n" + rank.join("\n")))
             break
         } else {
             alert("Opción no valida. Por favor seleccione la opción correcta.")
-            opcion = Number(prompt("Seleccione un juego " + '\n' + "Elija una opcion (Colocar el número correspondiente):" + "\n" + game.game1 + "\n" + game.game2 + "\n" + game.game3 + "\n" + game.game4 + "\n" + game.game5 + "\n" + game.game6))
+            opcion = Number(prompt("Seleccione un juego " + '\n' + "Elija una opcion (Colocar el número correspondiente):" + "\n" + games.join("\n")))
         }
     }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  Promedio                                  */
+/* -------------------------------------------------------------------------- */
 
 function promedio() {
-    let partidas = parseInt(prompt("Número de partidas jugadas."));
+    let partidas = parseInt(prompt("Número de partidas jugadas en el día."));
     let total = 0;
     for (let i = 1; i <= partidas; i++) {
         total = total + parseInt(prompt("¿Cuántos asesinatos realizó?"));
@@ -127,6 +134,115 @@ function promedio() {
     }
 }
 
-
 chooseRank();
 promedio();
+
+/* -------------------------------------------------------------------------- */
+/*                                  Usuarios                                  */
+/* -------------------------------------------------------------------------- */
+
+const users = [{
+    id: 1,
+    User: "Músico",
+    Game: "League of Legends",
+    Rank: "Platinum II",
+    Played: 41,
+    Wins: 22,
+    Losses: 19,
+    Winrate: 53.7
+}, {
+    id: 2,
+    User: "xBlake",
+    Game: "League of Legends",
+    Rank: "Gold I",
+    Played: 60,
+    Wins: 26,
+    Losses: 10,
+    Winrate: 66.7
+}, {
+    id: 3,
+    User: "Aek",
+    Game: "Valorant",
+    Rank: "Gold",
+    Played: 50,
+    Wins: 25,
+    Losses: 25,
+    Winrate: 50
+}, {
+    id: 4,
+    User: "Chapu",
+    Game: "Valorant",
+    Rank: "Diamond",
+    Played: 60,
+    Wins: 40,
+    Losses: 20,
+    Winrate: 66.6
+}, {
+    id: 5,
+    User: "KooF",
+    Game: "Counter Strike",
+    Rank: "Master Guardian Elite",
+    Played: 51,
+    Wins: 36,
+    Losses: 15,
+    Winrate: 70.5
+}];
+
+/* -------------------------------------------------------------------------- */
+/*                             Busqueda de Usuario                            */
+/* -------------------------------------------------------------------------- */
+
+const buscador = users.find((elemento) => elemento.User === "Músico")
+console.log(buscador);
+
+/* -------------------------------------------------------------------------- */
+/*                                   Filtros                                  */
+/* -------------------------------------------------------------------------- */
+
+const gamesFilter = users.filter((games) => {
+    return games.Game === "Valorant"
+})
+const winrateFilter = users.filter((element) => {
+    return element.Winrate > 60, element.Played > 55
+})
+
+console.log(gamesFilter);
+console.log(winrateFilter);
+
+/* -------------------------------------------------------------------------- */
+/*                         Registro de Usuario al Array                       */
+/* -------------------------------------------------------------------------- */
+const games2 = ["League of Legends", "Dota 2", "Valorant", "Counter Strike", "Fortnite", "Apex Legends", "PUBG"]
+
+let rank = [
+    "Hierro",
+    "Bronce",
+    "Plata",
+    "Oro",
+    "Platino",
+    "Diamante",
+    "Master",
+    "GrandMaster",
+]
+
+const Id1 = users.length + 1
+const User1 = prompt("Ingresar su usuario")
+const Game1 = prompt("Seleccionar Juego"+ "\n"+ games2.join("\n"))
+const Rank1 = prompt("Seleccionar Rango" +"\n" + rank.join("\n"))
+const Played1 = Number(prompt("Partidas Jugadas"))
+const Wins1 = Number(prompt("Partidas Ganadas"))
+const Losses1 = Played1 - Wins1
+const Winrate1 = Wins1 * 100 / Played1
+
+users.push({
+    id: Id1,
+    User: User1,
+    Game: Game1,
+    Rank: Rank1,
+    Played: Played1,
+    Wins: Wins1,
+    Losses: Losses1,
+    Winrate: Winrate1
+})
+
+alert(User1 + "\n" + Game1 + "\n" + Rank1+ "\n" + "\n" + "Winrate: " + Winrate1 + "%")
