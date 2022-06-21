@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------------------- */
+/*                                 Bienvenida                                 */
+/* -------------------------------------------------------------------------- */
 function nombreUsuario() {
     let usuario = prompt("Ingrese su usuario");
     alert("Bienvenido " + usuario);
@@ -5,7 +8,11 @@ function nombreUsuario() {
 
 nombreUsuario();
 
-const games = ["1. League of Legends", "2. Dota 2", "3. Valorant", "4 .Counter Strike", "5. Fortnite", "6. Apex Legends", "7. PUBG"]
+/* -------------------------------------------------------------------------- */
+/*                                  Datos                                     */
+/* -------------------------------------------------------------------------- */
+
+const games = ["1. League of Legends", "2. Dota 2", "3. Valorant", "4 .Counter Strike", "5. Fortnite", "6. Apex Legends", "7. PUBG"];
 
 games.pop(6);
 
@@ -107,9 +114,12 @@ function chooseRank() {
     }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  Promedio                                  */
+/* -------------------------------------------------------------------------- */
 
 function promedio() {
-    let partidas = parseInt(prompt("Número de partidas jugadas."));
+    let partidas = parseInt(prompt("Número de partidas jugadas en el día."));
     let total = 0;
     for (let i = 1; i <= partidas; i++) {
         total = total + parseInt(prompt("¿Cuántos asesinatos realizó?"));
@@ -124,6 +134,116 @@ function promedio() {
     }
 }
 
-
 chooseRank();
 promedio();
+
+/* -------------------------------------------------------------------------- */
+/*                                  Usuarios                                  */
+/* -------------------------------------------------------------------------- */
+
+const users = [{
+    id: 1,
+    User: "Músico",
+    Game: "League of Legends",
+    Rank: "Platinum II",
+    Played: 41,
+    Wins: 22,
+    Losses: 19,
+    Winrate: 53.7
+}, {
+    id: 2,
+    User: "xBlake",
+    Game: "League of Legends",
+    Rank: "Gold I",
+    Played: 60,
+    Wins: 26,
+    Losses: 10,
+    Winrate: 66.7
+}, {
+    id: 3,
+    User: "Aek",
+    Game: "Valorant",
+    Rank: "Gold",
+    Played: 50,
+    Wins: 25,
+    Losses: 25,
+    Winrate: 50
+}, {
+    id: 4,
+    User: "Chapu",
+    Game: "Valorant",
+    Rank: "Diamond",
+    Played: 60,
+    Wins: 40,
+    Losses: 20,
+    Winrate: 66.6
+}, {
+    id: 5,
+    User: "KooF",
+    Game: "Counter Strike",
+    Rank: "Master Guardian Elite",
+    Played: 51,
+    Wins: 36,
+    Losses: 15,
+    Winrate: 70.5
+}];
+
+/* -------------------------------------------------------------------------- */
+/*                             Busqueda de Usuario                            */
+/* -------------------------------------------------------------------------- */
+
+const buscador = users.find((elemento) => elemento.User === "Músico")
+console.log(buscador);
+
+/* -------------------------------------------------------------------------- */
+/*                                   Filtros                                  */
+/* -------------------------------------------------------------------------- */
+
+const gamesFilter = users.filter((juego) => {
+    return juego.Game === "Valorant"
+})
+const winrateFilter = users.filter((element) => {
+    return element.Winrate > 60, element.Played > 55
+})
+
+console.log(gamesFilter);
+console.log(winrateFilter);
+
+/* -------------------------------------------------------------------------- */
+/*                         Registro de Usuario al Array                       */
+/* -------------------------------------------------------------------------- */
+const games2 = ["League of Legends", "Dota 2", "Valorant", "Counter Strike", "Fortnite", "Apex Legends", "PUBG"]
+
+let rank = [
+    "Hierro",
+    "Bronce",
+    "Plata",
+    "Oro",
+    "Platino",
+    "Diamante",
+    "Master",
+    "GrandMaster",
+]
+
+const Id1 = users.length + 1
+const User1 = prompt("Ingresar su usuario")
+const Game1 = prompt("Seleccionar Juego"+ "\n"+ games2.join("\n"))
+const Rank1 = prompt("Seleccionar Rango" +"\n" + rank.join("\n"))
+const Played1 = Number(prompt("Partidas Jugadas"))
+const Wins1 = Number(prompt("Partidas Ganadas"))
+const Losses1 = Played1 - Wins1
+const Winrate1 = Wins1 * 100 / Played1
+
+users.push({
+    id: Id1,
+    User: User1,
+    Game: Game1,
+    Rank: Rank1,
+    Played: Played1,
+    Wins: Wins1,
+    Losses: Losses1,
+    Winrate: Winrate1
+})
+
+console.log(users);
+alert(User1 + "\n" + Game1 + "\n" + Rank1+ "\n" + "\n" + "Winrate: " + Winrate1 + "%")
