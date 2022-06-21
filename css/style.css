@@ -6,7 +6,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: red;
     text-shadow: 0 0 10px black, 0 0 20px orangered, 0 0 30px violet;
     text-align: center;
 }
@@ -25,6 +24,7 @@ header {
 }
 
 nav {
+    color: red;
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -57,4 +57,42 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+h1 {
+    color: white;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-size: 2.6em;
+    margin: 2%;
+    color: white;
+    letter-spacing: 3px;
+}
+
+#profiles {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil {
+    color: white;
+    border: 2px solid white;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    font-size: .9em;
+    width: 20%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
 }
